@@ -1,0 +1,15 @@
+.welcome_logo {
+  width: 50%;
+  margin-bottom: 2rem;
+}
+.welcome_wrapper {
+  padding: 2rem;
+  border-radius: 1rem;
+  background-color: #f3f3f3;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.welcome_wrapper form {
+  margin: 2rem 0;
+}

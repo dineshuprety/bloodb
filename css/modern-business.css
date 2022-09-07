@@ -1,0 +1,345 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  padding-top: 50px;
+}
+
+/* Home Page Carousel */
+
+header.carousel {
+  height: 80%;
+}
+
+header.carousel .item,
+header.carousel .item.active,
+header.carousel .carousel-inner {
+  height: 100%;
+}
+
+header.carousel .fill {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+/* Responsive Styles */
+
+@media (max-width: 991px) {
+  .customer-img,
+  .img-related {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .img-portfolio {
+    margin-bottom: 15px;
+  }
+
+  header.carousel .carousel {
+    height: 70%;
+  }
+}
+
+.mess {
+  margin-top: 20px;
+  margin-bottom: -5px;
+  border-radius: 5px;
+  background-color: white;
+  border: 1px solid #2780e3;
+  color: #2780e3;
+}
+.mess p {
+  color: #2780e3;
+}
+.mess i {
+  font-weight: bold;
+  color: #2780e3;
+}
+.ui-datepicker-month,
+.ui-datepicker-year {
+  color: black !important;
+}
+
+.ui-widget-header {
+  border: 1px solid #2780e3 !important;
+  background: #2780e3 !important;
+  color: #ffffff !important;
+  font-weight: bold;
+}
+
+p,
+li {
+  font-size: 17px;
+}
+
+.centered-form {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.centered-form .panel {
+  background: #f8f8f8;
+  box-shadow: rgba(0, 0, 0, 0.15) 15px 15px 15px;
+  border: none;
+  margin-bottom: 60px;
+}
+
+.mess p {
+  color: #2780e3;
+}
+
+.mess i {
+  font-weight: bold;
+  color: #2780e3;
+}
+
+.mess {
+  margin-top: 20px;
+  margin-bottom: -5px;
+  border-radius: 5px;
+  background-color: white;
+  border: 1px solid #2780e3;
+  color: #2780e3;
+}
+
+.navbar-header a {
+  color: #cc0017 !important;
+  font-size: 42px;
+  font-weight: bolder;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.navbar-default .navbar-toggle {
+  background-color: #cc0017 !important;
+  transition: 0.5s;
+}
+
+.navbar-default .navbar-toggle:hover {
+  background-color: #fff !important;
+  border-color: #cc0017;
+}
+
+.navbar-default .navbar-toggle:hover span {
+  color: #cc0017;
+}
+
+.navbar-default {
+  background-color: #fff;
+  box-shadow: 0px 0px 10px 0px grey;
+  border-color: #fff !important;
+}
+
+.navbar-default .navbar-nav li a {
+  color: #cc0017 !important;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 0px 10px;
+  border-radius: 4px;
+  margin: 10px 15px;
+  transition: 0.5s;
+  line-height: 2;
+}
+
+.navbar-default .navbar-nav li:last-child a {
+  background-color: #cc0017 !important;
+  color: #fff !important;
+}
+
+.navbar-default .navbar-nav li a:hover {
+  background-color: #cc0017 !important;
+  color: #fff !important;
+}
+.panel-primary {
+  margin-bottom: 25px;
+}
+.navbar-default .navbar-nav li a:focus {
+  background-color: #e4e4e4 !important;
+  outline: none !important;
+}
+
+.navbar-default .navbar-nav li a:active {
+  background-color: #e4e4e4 !important;
+}
+
+.panel-heading {
+  background-color: #cc0017 !important;
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+}
+
+.navbar-default .navbar-header .navbar-brand {
+  padding: 10px 15px !important;
+}
+
+.navbar-default .navbar-header .navbar-brand img {
+  height: auto;
+  width: 250px;
+  display: block;
+}
+
+/* Buttons Design */
+
+.btn-primary {
+  background-color: #cc0017;
+  border-color: #cc0017;
+  transition: 0.5s;
+}
+
+.btn-primary:hover {
+  background-color: #fff;
+  border-color: #cc0017;
+  color: #cc0017;
+}
+
+/*End of  Buttons Design */
+.page-header {
+  text-align: center !important;
+}
+
+.text-primary {
+  color: #cc0017 !important;
+  font-family: "Bison", sans-serif;
+  font-weight: 600;
+  text-align: center;
+}
+
+.page-header1 {
+  text-align: center !important;
+}
+.text-primary1 {
+  color: #cc0017 !important;
+  font-family: "Bison", sans-serif;
+  font-weight: 600;
+  text-align: left;
+}
+
+/*About us*/
+
+.aboutus-minihead li a {
+  color: #cc0017;
+  display: inline-block;
+  margin: 0;
+  text-decoration: none !important;
+}
+
+.aboutus-minihead li a:after {
+  display: block;
+  content: "";
+  border-bottom: solid 2px #cc0017;
+  color: #cc0017;
+  transform: scaleX(0);
+  transition: transform 700ms ease-in-out;
+}
+
+.aboutus-minihead li a:hover {
+  color: #cc0017;
+}
+
+.aboutus-minihead li a:hover:after {
+  transform-origin: 0% 50%;
+  transform: scaleX(1);
+  color: #cc0017;
+}
+
+/*End of about us*/
+
+.nav-stacked a {
+  color: #cc0017 !important;
+}
+
+.nav-stacked a i {
+  color: #cc0017 !important;
+  padding-right: 6px;
+}
+
+.ui-widget-header {
+  border: 1px solid #cc0017 !important;
+  background: #cc0017 !important;
+  color: #cc0017 !important;
+  font-weight: bold;
+}
+
+.list-social-icons a i {
+  color: #cc0017 !important;
+}
+
+/*Services*/
+
+.panel-body {
+  padding: 15px 20px;
+}
+
+.breadcrumb {
+  text-align: center;
+}
+
+/*Footer*/
+
+.main-footer {
+  background: #cc0017;
+  display: flex;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  padding: 20px 0px 10px;
+  margin-top: 50px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.main-footer footer .footer-designs ul {
+  justify-content: center;
+}
+
+.main-footer footer .footer-designs ul li a {
+  padding: 5px;
+  margin: 0px 11px;
+  width: 35px;
+  height: 35px;
+  display: inline-block;
+  border-radius: 100%;
+  box-shadow: 0px 0px 2px #fff;
+  background: #fff;
+  transition: all 0.8s;
+}
+
+.main-footer footer .footer-designs ul li a:hover {
+  background: #cc0017;
+  box-shadow: 0px 0px 4px #000;
+  transition: all 0.8s;
+}
+
+.main-footer footer .footer-designs ul li a:hover i {
+  color: #fff;
+  transition: all 0.8s;
+}
+
+.footer-designs .footer-icons {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.footer-designs .footer-icons i {
+  font-size: 20px;
+  color: #930e0d;
+  margin: 3px 0px 0px 0px;
+  transition: all 0.8s;
+}
+
+.main-footer footer .footer-designs p {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: #cdbdbdcc;
+  padding-top: 10px;
+  font-size: 15px;
+}
