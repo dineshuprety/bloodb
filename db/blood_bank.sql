@@ -1,24 +1,17 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 4.9.7
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Nov 10, 2020 at 10:03 AM
--- Server version: 10.4.14-MariaDB
--- PHP Version: 7.4.9
+-- Host: localhost:8889
+-- Generation Time: Sep 08, 2022 at 09:39 AM
+-- Server version: 5.7.32
+-- PHP Version: 8.0.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
 SET time_zone = "+00:00";
 
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
 --
--- Database: `blood_bank`
+-- Database: `blood`
 --
 
 -- --------------------------------------------------------
@@ -56,6 +49,7 @@ CREATE TABLE `blood_donor` (
   `BLOOD` varchar(150) NOT NULL,
   `BODY_WEIGHT` int(11) NOT NULL,
   `EMAIL` varchar(150) NOT NULL,
+  `PASSWORD` varchar(55) NOT NULL,
   `ADDRESS` text NOT NULL,
   `AREA` varchar(150) NOT NULL,
   `DISTRICT` varchar(150) NOT NULL,
@@ -73,16 +67,19 @@ CREATE TABLE `blood_donor` (
 -- Dumping data for table `blood_donor`
 --
 
-INSERT INTO `blood_donor` (`DONOR_ID`, `NAME`, `FATHER_NAME`, `GENDER`, `DOB`, `BLOOD`, `BODY_WEIGHT`, `EMAIL`, `ADDRESS`, `AREA`, `DISTRICT`, `PROVINCE`, `COUNTRY`, `CONTACT_1`, `CONTACT_2`, `NEW_DONOR`, `LAST_D_DATE`, `DONOR_PIC`, `STATUS`) VALUES
-(1, 'Bishal Adhikari', 'Bichari Prasad Adhikari', 'Male', '1997-06-18', 'O+', 60, 'mabishalho@gmail.com', 'Kalanki, Makalu, Syuchatar', 'Makalu', 'Kathmandu', 'Province No. 3', 'Nepal', '9849480576', '9860405623', 'Yes', '0000-00-00', 'donor_image/331IMG_8795.jpg', 1),
-(2, 'Biwash Karki', 'Bikash Karki', 'Male', '1997-11-10', 'O+', 75, 'karkibibash@gmail.com', 'Ekantakuna, Petrol Pump', 'Ekantakuna', 'Lalitpur', 'Province No. 3', 'Nepal', '9860123456', '985612345', 'Yes', '0000-00-00', 'donor_image/471high_quality_lens_flares_in_png_05_by_genivaldosouza_d9ztl6e-pre.jpg', 1),
-(3, 'Milan Thapa', 'Dhan Bahadur Thapa', 'Male', '1998-04-14', 'A+', 70, 'thapakaji@gmail.com', 'Kirtipur, Maitrinagar', 'Kitripur Gumba', 'Kathmandu', 'Province No. 3', 'Nepal', '9865432213', '9860112233', 'Yes', '0000-00-00', 'donor_image/155selective-focus-photo-of-parked-blue-and-black-cafe-racer-2549941.jpg', 1),
-(4, 'Anuj Gyawali', 'Ram Gyawali', 'Male', '1998-12-25', 'B+', 65, 'gyawalianuj@gmail.com', 'Kirtipur, Maitrinagar', 'Kirtipur', 'Kathmandu', 'Province No. 3', 'Nepal', '9843445423', '9865405342', 'Yes', '0000-00-00', 'donor_image/395Deer_by_sweetpoisonresources (1).png', 1),
-(5, 'Anish Pokharel', 'Rameshowr Pokharel', 'Male', '1998-08-04', 'O+', 65, 'anishpokharel@gmail.com', 'Kirtipur, Tyanglaphant, Chadani Chowk', 'Tyanglaphant', 'Kathmandu', 'Province No. 3', 'Nepal', '9845321123', '9860231233', 'Yes', '0000-00-00', 'donor_image/418IMG_3259.jpg', 1),
-(6, 'Avisek Regmi', 'Meghnath Regmi', 'Male', '1999-04-14', 'A+', 65, 'regmiavisek@gmail.com', 'Kirtipur, Maitrinagar, Adarshanagar', 'Maitrinagar', 'Kathmandu', 'Province No. 3', 'Nepal', '9864563827', '9860847536', 'Yes', '0000-00-00', 'donor_image/743yuvraj-singh-n0__vDfdTHg-unsplash.jpg', 1),
-(7, 'Mamata Wagle', 'Manmohan Wagle', 'Female', '1999-04-29', 'A+', 55, 'mamatawagle@gmail.com', 'Kalanki, Makalu Petrol Pump', 'Makalu', 'Kathmandu', 'Province No. 3', 'Nepal', '9865048392', '9863049745', 'Yes', '0000-00-00', 'donor_image/399facebook-default-no-profile-pic-girl.jpg', 1),
-(8, 'Simran Khadka', 'Santaram Kdadka', 'Female', '1994-01-04', 'B+', 55, 'sadikshyak@gmail.com', 'Kalanki, Makalu Petrol Pump', 'Makalu', 'Kathmandu', 'Province No. 3', 'Nepal', '9840376566', '9860446653', 'No', '0000-00-00', 'donor_image/658facebook-default-no-profile-pic-girl.jpg', 0),
-(10, 'Bidur Acharya', 'Prem Acharya', 'Male', '1999-11-01', 'B+', 65, 'acharyabidyour@gmail.com', 'Kalanki, Makalu, Syuchatar', 'Makalu', 'Kathmandu', 'Province No. 3', 'Nepal', '9864098989', '9860465345', 'Yes', '0000-00-00', 'donor_image/690l60Hf.png', 0);
+INSERT INTO `blood_donor` (`DONOR_ID`, `NAME`, `FATHER_NAME`, `GENDER`, `DOB`, `BLOOD`, `BODY_WEIGHT`, `EMAIL`, `PASSWORD`, `ADDRESS`, `AREA`, `DISTRICT`, `PROVINCE`, `COUNTRY`, `CONTACT_1`, `CONTACT_2`, `NEW_DONOR`, `LAST_D_DATE`, `DONOR_PIC`, `STATUS`) VALUES
+(1, 'Bishal Adhikari', 'Bichari Prasad Adhikari', 'Male', '1997-06-18', 'O+', 60, 'mabishalho@gmail.com', 'admin', 'Kalanki, Makalu, Syuchatar', 'Makalu', 'Kathmandu', 'Province No. 3', 'Nepal', '9849480576', '9860405623', 'Yes', '0000-00-00', 'donor_image/331IMG_8795.jpg', 1),
+(2, 'Biwash Karki', 'Bikash Karki', 'Male', '1997-11-10', 'O+', 75, 'karkibibash@gmail.com', 'admin', 'Ekantakuna, Petrol Pump', 'Ekantakuna', 'Lalitpur', 'Province No. 3', 'Nepal', '9860123456', '985612345', 'Yes', '0000-00-00', 'donor_image/471high_quality_lens_flares_in_png_05_by_genivaldosouza_d9ztl6e-pre.jpg', 1),
+(3, 'Milan Thapa', 'Dhan Bahadur Thapa', 'Male', '1998-04-14', 'A+', 70, 'thapakaji@gmail.com', 'admin', 'Kirtipur, Maitrinagar', 'Kitripur Gumba', 'Kathmandu', 'Province No. 3', 'Nepal', '9865432213', '9860112233', 'Yes', '0000-00-00', 'donor_image/155selective-focus-photo-of-parked-blue-and-black-cafe-racer-2549941.jpg', 1),
+(4, 'Anuj Gyawali', 'Ram Gyawali', 'Male', '1998-12-25', 'B+', 65, 'gyawalianuj@gmail.com', 'admin', 'Kirtipur, Maitrinagar', 'Kirtipur', 'Kathmandu', 'Province No. 3', 'Nepal', '9843445423', '9865405342', 'Yes', '0000-00-00', 'donor_image/395Deer_by_sweetpoisonresources (1).png', 1),
+(5, 'Anish Pokharel', 'Rameshowr Pokharel', 'Male', '1998-08-04', 'O+', 65, 'anishpokharel@gmail.com', 'admin', 'Kirtipur, Tyanglaphant, Chadani Chowk', 'Tyanglaphant', 'Kathmandu', 'Province No. 3', 'Nepal', '9845321123', '9860231233', 'Yes', '0000-00-00', 'donor_image/418IMG_3259.jpg', 1),
+(6, 'Avisek Regmi', 'Meghnath Regmi', 'Male', '1999-04-14', 'A+', 65, 'regmiavisek@gmail.com', 'admin', 'Kirtipur, Maitrinagar, Adarshanagar', 'Maitrinagar', 'Kathmandu', 'Province No. 3', 'Nepal', '9864563827', '9860847536', 'Yes', '0000-00-00', 'donor_image/743yuvraj-singh-n0__vDfdTHg-unsplash.jpg', 1),
+(7, 'Mamata Wagle', 'Manmohan Wagle', 'Female', '1999-04-29', 'A+', 55, 'mamatawagle@gmail.com', 'admin', 'Kalanki, Makalu Petrol Pump', 'Makalu', 'Kathmandu', 'Province No. 3', 'Nepal', '9865048392', '9863049745', 'Yes', '0000-00-00', 'donor_image/399facebook-default-no-profile-pic-girl.jpg', 1),
+(8, 'Simran Khadka', 'Santaram Kdadka', 'Female', '1994-01-04', 'B+', 55, 'sadikshyak@gmail.com', 'admin', 'Kalanki, Makalu Petrol Pump', 'Makalu', 'Kathmandu', 'Province No. 3', 'Nepal', '9840376566', '9860446653', 'No', '0000-00-00', 'donor_image/658facebook-default-no-profile-pic-girl.jpg', 0),
+(10, 'Bidur Acharya', 'Prem Acharya', 'Male', '1999-11-01', 'B+', 65, 'acharyabidyour@gmail.com', 'admin', 'Kalanki, Makalu, Syuchatar', 'Makalu', 'Kathmandu', 'Province No. 3', 'Nepal', '9864098989', '9860465345', 'Yes', '0000-00-00', 'donor_image/690l60Hf.png', 0),
+(11, 'testinng', 'Diana Maynard', 'Others', '2025-10-06', 'AB+', 4, 'wudakyzec@mailinator.com', 'admin', 'Natus recusandae La', 'Duis ad veritatis es', '118', '1', '1', '54', '81', 'No', '1971-12-28', 'donor_image/397Screen Shot 2021-02-08 at 9.36.32 AM.png', 0),
+(12, 'testinng', 'Diana Maynard', 'Others', '2025-10-06', 'AB+', 4, 'wudakyzec@mailinator.com', 'admin', 'Natus recusandae La', 'Duis ad veritatis es', '118', '1', '1', '54', '81', 'No', '1971-12-28', 'donor_image/922Screen Shot 2021-02-08 at 9.36.32 AM.png', 0),
+(13, 'testing2', 'Galena Carver', 'Others', '2020-05-06', 'O-', 83, 'bekohy@mailinator.com', 'dinesh', 'Et architecto dolore', 'Quibusdam pariatur ', '95', '5', '1', '37', '73', 'No', '1993-06-24', 'donor_image/537Screen Shot 2021-09-29 at 2.32.31 PM.png', 0);
 
 -- --------------------------------------------------------
 
@@ -267,7 +264,7 @@ CREATE TABLE `request_blood` (
   `CON2` varchar(150) NOT NULL,
   `REASON` text NOT NULL,
   `PIC` varchar(150) NOT NULL,
-  `STATUS` int(11) NOT NULL,
+  `STATUS` int(11) NOT NULL DEFAULT '0',
   `CDATE` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -276,7 +273,8 @@ CREATE TABLE `request_blood` (
 --
 
 INSERT INTO `request_blood` (`ID`, `NAME`, `GENDER`, `BLOOD`, `BUNIT`, `HOSP`, `DISTRICT`, `DOC`, `RDATE`, `CNAME`, `CADDRESS`, `EMAIL`, `CON1`, `CON2`, `REASON`, `PIC`, `STATUS`, `CDATE`) VALUES
-(1, 'Wangle Wagle', 'Male', 'B+', 4, 'Kirtipur Hospital', 'Kathmandu', 'Govinda KC', '2020-11-11', 'Bidur Acharya', 'Kalanki, Kathmandu', 'adharyabidyour@gmail.com', '9865389756', '9841987065', 'Accident', 'request_image/235oldman-sub.png', 0, '0000-00-00');
+(1, 'Wangle Wagle', 'Male', 'B+', 4, 'Kirtipur Hospital', 'Kathmandu', 'Govinda KC', '2020-11-11', 'Bidur Acharya', 'Kalanki, Kathmandu', 'adharyabidyour@gmail.com', '9865389756', '9841987065', 'Accident', 'request_image/235oldman-sub.png', 0, '0000-00-00'),
+(2, 'testing', 'Female', 'O+', 5, 'Quo culpa ut quibus', 'Deserunt quo enim ut', 'Aspernatur tenetur u', '2022-09-19', 'Drew Quinn', 'Deserunt sequi ad el', 'bele@mailinator.com', '9807393225', '9845255248', 'Veritatis distinctio', 'request_image/360Screen Shot 2021-09-20 at 3.46.37 PM.png', 0, '2022-09-08');
 
 --
 -- Indexes for dumped tables
@@ -332,19 +330,19 @@ ALTER TABLE `request_blood`
 -- AUTO_INCREMENT for table `area`
 --
 ALTER TABLE `area`
-  MODIFY `AREA_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=368;
+  MODIFY `AREA_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `blood_donor`
 --
 ALTER TABLE `blood_donor`
-  MODIFY `DONOR_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `DONOR_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `country`
 --
 ALTER TABLE `country`
-  MODIFY `COUNTRY_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `COUNTRY_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `district`
@@ -362,15 +360,10 @@ ALTER TABLE `messages`
 -- AUTO_INCREMENT for table `province`
 --
 ALTER TABLE `province`
-  MODIFY `PROVINCE_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
+  MODIFY `PROVINCE_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `request_blood`
 --
 ALTER TABLE `request_blood`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
