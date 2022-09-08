@@ -1,4 +1,5 @@
-      <!-- Navigation -->
+<?php include 'componets/auth.php' ?>
+<!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="top-navbar">
@@ -21,7 +22,7 @@
                         <li><a href="Search_Donor.php">OUR SERVICES</a></li>
                         <li><a href="about.php">ABOUT US</a></li>
                         <li><a href="contact.php">ENQUIRY</a></li>
-                        <li><a href="index.php" class="btn btn-primary text-muted"><i class="fa fa-sign-out"></i> LOGOUT</a></li>
+                        <li><a href="componets/logout.php" class="btn btn-primary text-muted"><i class="fa fa-sign-out"></i> LOGOUT</a></li>
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
