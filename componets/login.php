@@ -16,6 +16,7 @@ if (isset($_POST['submit'])) {
         $query    = "SELECT * FROM `blood_donor` WHERE EMAIL='$email'
         and PASSWORD='$mdpassword'";
         $result = mysqli_query($con, $query) or die(mysql_error());
+        /* Checking if the user is in the database. */
         $rows = mysqli_num_rows($result);
         if ($rows == 1) {
             $_SESSION['email'] = $email;

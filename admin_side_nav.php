@@ -22,6 +22,7 @@ else
 	<li><a href="admin_ndonor.php"><i class="fa fa-users fa-lg text-danger"></i> New Registered Donors</a></li>
 	<li><a href="admin_need_blood.php"><i class="fa fa-bed fa-lg"></i> Request Blood</a></li>
 	<li><a href="admin_campaign.php"><i class="fa fa-object-ungroup fa-lg"></i> Campaign List</a></li>
+	<li><a href="admin_camp_donar.php"><i class="fa fa-users fa-lg text-danger"></i> Campaign Donors</a></li>
 	<hr>
 	<li><a href="#add" data-toggle="collapse" ><i class="fa fa-cogs fa-lg"></i> Settings</a></li>
 	<ul class="nav collapse" id="add">

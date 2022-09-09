@@ -45,6 +45,7 @@
         </div>
         <!-- /.row -->
         <div class="row">
+            <?php include 'componets/reg_campaign.php'; ?>
             <div class="col-lg-12">
                 <h2 class="page-header  text-primary">Upcoming Blood Donation Campaign</h2>
             </div>
@@ -66,7 +67,7 @@
                                         <p><b>{$row['district_name']}</b></p>
                                         <p>{$row['date']}</p>
                                         <p>{$row['contact']}</p>
-                                        <button class='btn btn-warning' data-toggle='modal' data-target='#registerModal'>Register</button>
+                                        <a OnClick=\"return confirm('Are you sure want to register this campaign?');\" href='user.php?add={$row['id']}'><button class='btn btn-warning'>Register</button></a>
                                     </div>
                                 </div>
                              </div>";

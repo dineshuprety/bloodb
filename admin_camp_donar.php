@@ -22,14 +22,14 @@ include("admin_function.php");
 			<?php include("admin_side_nav.php");?>
 		</div>
 		<div class="col-sm-9" >
-			<h3 class="text-danger"><i class="fa fa-users"></i> New Registered Donor Details </h3><hr>    
+			<h3 class="text-danger"><i class="fa fa-users"></i> Campaign Donor Details </h3><hr>    
 		<div class="row">
 		
 		<div class='col-md-12'>
 			<div class='table-responsive' id="feedback">
 			
 			<?php 
-				$sql="Select * from blood_donor WHERE STATUS=0";
+				$sql="Select * from blood_campaign";
 				load_donor($sql,$con); 
 			?>
 			
