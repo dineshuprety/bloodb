@@ -30,6 +30,15 @@
 					';
 				}
 					}
+                    $email_data = $_SESSION['email'];
+                    $query = "SELECT * FROM blood_donor WHERE EMAIL = '$email_data'";
+                    $result = mysqli_query($con, $query) or die(mysql_error());
+                    $rows = $result->fetch_row();
+
+                    // echo "<pre>";
+                    // echo print_r($rows);
+                    // die();
+                    
 				?>
 		
 				<h3 class='text-primary'>LEAVE A MESSAGE / SUGGESTIONS / ENQUIRIES</h3>
@@ -37,20 +46,20 @@
                     <div class="control-group form-group">
                         <div class="controls">
                             <label>Full Name:</label>
-                            <input type="text" class="form-control" name="name" required>
+                            <input type="text" class="form-control" name="name"  value="<?php echo $rows[1] ?>" required>
                             <p class="help-block"></p>
                         </div>
                     </div>
                     <div class="control-group form-group">
                         <div class="controls">
                             <label>Phone Number:</label>
-                            <input type="tel" class="form-control" name="phone" required>
+                            <input type="tel" class="form-control" name="phone"  value="<?php echo $rows[14] ?>" required>
                         </div>
                     </div>
                     <div class="control-group form-group">
                         <div class="controls">
                             <label>Email Address:</label>
-                            <input type="email" class="form-control" name="email"  >
+                            <input type="email" class="form-control" name="email" value="<?php echo $rows[7] ?>" >
                         </div>
                     </div>
                     <div class="control-group form-group">
