@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Sep 08, 2022 at 09:39 AM
+-- Generation Time: Sep 09, 2022 at 11:32 AM
 -- Server version: 5.7.32
 -- PHP Version: 8.0.8
 
@@ -68,18 +68,35 @@ CREATE TABLE `blood_donor` (
 --
 
 INSERT INTO `blood_donor` (`DONOR_ID`, `NAME`, `FATHER_NAME`, `GENDER`, `DOB`, `BLOOD`, `BODY_WEIGHT`, `EMAIL`, `PASSWORD`, `ADDRESS`, `AREA`, `DISTRICT`, `PROVINCE`, `COUNTRY`, `CONTACT_1`, `CONTACT_2`, `NEW_DONOR`, `LAST_D_DATE`, `DONOR_PIC`, `STATUS`) VALUES
-(1, 'Bishal Adhikari', 'Bichari Prasad Adhikari', 'Male', '1997-06-18', 'O+', 60, 'mabishalho@gmail.com', 'admin', 'Kalanki, Makalu, Syuchatar', 'Makalu', 'Kathmandu', 'Province No. 3', 'Nepal', '9849480576', '9860405623', 'Yes', '0000-00-00', 'donor_image/331IMG_8795.jpg', 1),
-(2, 'Biwash Karki', 'Bikash Karki', 'Male', '1997-11-10', 'O+', 75, 'karkibibash@gmail.com', 'admin', 'Ekantakuna, Petrol Pump', 'Ekantakuna', 'Lalitpur', 'Province No. 3', 'Nepal', '9860123456', '985612345', 'Yes', '0000-00-00', 'donor_image/471high_quality_lens_flares_in_png_05_by_genivaldosouza_d9ztl6e-pre.jpg', 1),
-(3, 'Milan Thapa', 'Dhan Bahadur Thapa', 'Male', '1998-04-14', 'A+', 70, 'thapakaji@gmail.com', 'admin', 'Kirtipur, Maitrinagar', 'Kitripur Gumba', 'Kathmandu', 'Province No. 3', 'Nepal', '9865432213', '9860112233', 'Yes', '0000-00-00', 'donor_image/155selective-focus-photo-of-parked-blue-and-black-cafe-racer-2549941.jpg', 1),
-(4, 'Anuj Gyawali', 'Ram Gyawali', 'Male', '1998-12-25', 'B+', 65, 'gyawalianuj@gmail.com', 'admin', 'Kirtipur, Maitrinagar', 'Kirtipur', 'Kathmandu', 'Province No. 3', 'Nepal', '9843445423', '9865405342', 'Yes', '0000-00-00', 'donor_image/395Deer_by_sweetpoisonresources (1).png', 1),
-(5, 'Anish Pokharel', 'Rameshowr Pokharel', 'Male', '1998-08-04', 'O+', 65, 'anishpokharel@gmail.com', 'admin', 'Kirtipur, Tyanglaphant, Chadani Chowk', 'Tyanglaphant', 'Kathmandu', 'Province No. 3', 'Nepal', '9845321123', '9860231233', 'Yes', '0000-00-00', 'donor_image/418IMG_3259.jpg', 1),
-(6, 'Avisek Regmi', 'Meghnath Regmi', 'Male', '1999-04-14', 'A+', 65, 'regmiavisek@gmail.com', 'admin', 'Kirtipur, Maitrinagar, Adarshanagar', 'Maitrinagar', 'Kathmandu', 'Province No. 3', 'Nepal', '9864563827', '9860847536', 'Yes', '0000-00-00', 'donor_image/743yuvraj-singh-n0__vDfdTHg-unsplash.jpg', 1),
-(7, 'Mamata Wagle', 'Manmohan Wagle', 'Female', '1999-04-29', 'A+', 55, 'mamatawagle@gmail.com', 'admin', 'Kalanki, Makalu Petrol Pump', 'Makalu', 'Kathmandu', 'Province No. 3', 'Nepal', '9865048392', '9863049745', 'Yes', '0000-00-00', 'donor_image/399facebook-default-no-profile-pic-girl.jpg', 1),
-(8, 'Simran Khadka', 'Santaram Kdadka', 'Female', '1994-01-04', 'B+', 55, 'sadikshyak@gmail.com', 'admin', 'Kalanki, Makalu Petrol Pump', 'Makalu', 'Kathmandu', 'Province No. 3', 'Nepal', '9840376566', '9860446653', 'No', '0000-00-00', 'donor_image/658facebook-default-no-profile-pic-girl.jpg', 0),
-(10, 'Bidur Acharya', 'Prem Acharya', 'Male', '1999-11-01', 'B+', 65, 'acharyabidyour@gmail.com', 'admin', 'Kalanki, Makalu, Syuchatar', 'Makalu', 'Kathmandu', 'Province No. 3', 'Nepal', '9864098989', '9860465345', 'Yes', '0000-00-00', 'donor_image/690l60Hf.png', 0),
-(11, 'testinng', 'Diana Maynard', 'Others', '2025-10-06', 'AB+', 4, 'wudakyzec@mailinator.com', 'admin', 'Natus recusandae La', 'Duis ad veritatis es', '118', '1', '1', '54', '81', 'No', '1971-12-28', 'donor_image/397Screen Shot 2021-02-08 at 9.36.32 AM.png', 0),
-(12, 'testinng', 'Diana Maynard', 'Others', '2025-10-06', 'AB+', 4, 'wudakyzec@mailinator.com', 'admin', 'Natus recusandae La', 'Duis ad veritatis es', '118', '1', '1', '54', '81', 'No', '1971-12-28', 'donor_image/922Screen Shot 2021-02-08 at 9.36.32 AM.png', 0),
-(13, 'testing2', 'Galena Carver', 'Others', '2020-05-06', 'O-', 83, 'bekohy@mailinator.com', 'dinesh', 'Et architecto dolore', 'Quibusdam pariatur ', '95', '5', '1', '37', '73', 'No', '1993-06-24', 'donor_image/537Screen Shot 2021-09-29 at 2.32.31 PM.png', 0);
+(1, 'Bishal Adhikari', 'Bichari Prasad Adhikari', 'Male', '1997-06-18', 'O+', 60, 'mabishalho@gmail.com', '21232f297a57a5a743894a0e4a801fc3', 'Kalanki, Makalu, Syuchatar', 'Makalu', 'Kathmandu', 'Province No. 3', 'Nepal', '9849480576', '9860405623', 'Yes', '0000-00-00', 'donor_image/331IMG_8795.jpg', 1),
+(2, 'Biwash Karki', 'Bikash Karki', 'Male', '1997-11-10', 'O+', 75, 'karkibibash@gmail.com', '21232f297a57a5a743894a0e4a801fc3', 'Ekantakuna, Petrol Pump', 'Ekantakuna', 'Lalitpur', 'Province No. 3', 'Nepal', '9860123456', '985612345', 'Yes', '0000-00-00', 'donor_image/471high_quality_lens_flares_in_png_05_by_genivaldosouza_d9ztl6e-pre.jpg', 1),
+(3, 'Milan Thapa', 'Dhan Bahadur Thapa', 'Male', '1998-04-14', 'A+', 70, 'thapakaji@gmail.com', '21232f297a57a5a743894a0e4a801fc3', 'Kirtipur, Maitrinagar', 'Kitripur Gumba', 'Kathmandu', 'Province No. 3', 'Nepal', '9865432213', '9860112233', 'Yes', '0000-00-00', 'donor_image/155selective-focus-photo-of-parked-blue-and-black-cafe-racer-2549941.jpg', 1),
+(4, 'Anuj Gyawali', 'Ram Gyawali', 'Male', '1998-12-25', 'B+', 65, 'gyawalianuj@gmail.com', '21232f297a57a5a743894a0e4a801fc3', 'Kirtipur, Maitrinagar', 'Kirtipur', 'Kathmandu', 'Province No. 3', 'Nepal', '9843445423', '9865405342', 'Yes', '0000-00-00', 'donor_image/395Deer_by_sweetpoisonresources (1).png', 1),
+(5, 'Anish Pokharel', 'Rameshowr Pokharel', 'Male', '1998-08-04', 'O+', 65, 'anishpokharel@gmail.com', '21232f297a57a5a743894a0e4a801fc3', 'Kirtipur, Tyanglaphant, Chadani Chowk', 'Tyanglaphant', 'Kathmandu', 'Province No. 3', 'Nepal', '9845321123', '9860231233', 'Yes', '0000-00-00', 'donor_image/418IMG_3259.jpg', 1),
+(6, 'Avisek Regmi', 'Meghnath Regmi', 'Male', '1999-04-14', 'A+', 65, 'regmiavisek@gmail.com', '21232f297a57a5a743894a0e4a801fc3', 'Kirtipur, Maitrinagar, Adarshanagar', 'Maitrinagar', 'Kathmandu', 'Province No. 3', 'Nepal', '9864563827', '9860847536', 'Yes', '0000-00-00', 'donor_image/743yuvraj-singh-n0__vDfdTHg-unsplash.jpg', 1),
+(7, 'Mamata Wagle', 'Manmohan Wagle', 'Female', '1999-04-29', 'A+', 55, 'mamatawagle@gmail.com', '21232f297a57a5a743894a0e4a801fc3', 'Kalanki, Makalu Petrol Pump', 'Makalu', 'Kathmandu', 'Province No. 3', 'Nepal', '9865048392', '9863049745', 'Yes', '0000-00-00', 'donor_image/399facebook-default-no-profile-pic-girl.jpg', 1),
+(8, 'Simran Khadka', 'Santaram Kdadka', 'Female', '1994-01-04', 'B+', 55, 'sadikshyak@gmail.com', '21232f297a57a5a743894a0e4a801fc3', 'Kalanki, Makalu Petrol Pump', 'Makalu', 'Kathmandu', 'Province No. 3', 'Nepal', '9840376566', '9860446653', 'No', '0000-00-00', 'donor_image/658facebook-default-no-profile-pic-girl.jpg', 0),
+(10, 'Bidur Acharya', 'Prem Acharya', 'Male', '1999-11-01', 'B+', 65, 'acharyabidyour@gmail.com', '21232f297a57a5a743894a0e4a801fc3', 'Kalanki, Makalu, Syuchatar', 'Makalu', 'Kathmandu', 'Province No. 3', 'Nepal', '9864098989', '9860465345', 'Yes', '0000-00-00', 'donor_image/690l60Hf.png', 0),
+(11, 'testinng', 'Diana Maynard', 'Others', '2025-10-06', 'AB+', 4, 'wudakyzec@mailinator.com', '21232f297a57a5a743894a0e4a801fc3', 'Natus recusandae La', 'Duis ad veritatis es', '118', '1', '1', '54', '81', 'No', '1971-12-28', 'donor_image/397Screen Shot 2021-02-08 at 9.36.32 AM.png', 0),
+(12, 'testinng', 'Diana Maynard', 'Others', '2025-10-06', 'AB+', 4, 'wudakyzec@mailinator.com', '21232f297a57a5a743894a0e4a801fc3', 'Natus recusandae La', 'Duis ad veritatis es', '118', '1', '1', '54', '81', 'No', '1971-12-28', 'donor_image/922Screen Shot 2021-02-08 at 9.36.32 AM.png', 0),
+(13, 'testing2', 'Galena Carver', 'Others', '2020-05-06', 'O-', 83, 'bekohy@mailinator.com', '21232f297a57a5a743894a0e4a801fc3', 'Et architecto dolore', 'Quibusdam pariatur ', '95', '5', '1', '37', '73', 'No', '1993-06-24', 'donor_image/537Screen Shot 2021-09-29 at 2.32.31 PM.png', 0),
+(14, 'Myles Kelley', 'Kalia Cash', 'Female', '2025-04-06', 'AB+', 1, 'hucahehes@mailinator.com', '21232f297a57a5a743894a0e4a801fc3', 'A dolor velit aut s', 'Voluptas id in omni', '97', '1', '1', '11', '16', 'Yes', '2017-12-30', 'donor_image/324Screen Shot 2021-09-29 at 6.12.04 PM.png', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `campaign`
+--
+
+CREATE TABLE `campaign` (
+  `id` int(11) NOT NULL,
+  `campaign_name` varchar(255) NOT NULL,
+  `province_name` varchar(255) NOT NULL,
+  `district_name` varchar(255) NOT NULL,
+  `date` varchar(255) NOT NULL,
+  `contact` varchar(255) NOT NULL,
+  `status` int(11) NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -293,6 +310,12 @@ ALTER TABLE `blood_donor`
   ADD PRIMARY KEY (`DONOR_ID`);
 
 --
+-- Indexes for table `campaign`
+--
+ALTER TABLE `campaign`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `country`
 --
 ALTER TABLE `country`
@@ -336,7 +359,13 @@ ALTER TABLE `area`
 -- AUTO_INCREMENT for table `blood_donor`
 --
 ALTER TABLE `blood_donor`
-  MODIFY `DONOR_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `DONOR_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
+--
+-- AUTO_INCREMENT for table `campaign`
+--
+ALTER TABLE `campaign`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `country`

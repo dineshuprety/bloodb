@@ -11,9 +11,10 @@ if (isset($_POST['submit'])) {
         $email = mysqli_real_escape_string($con, $email);
         $password = stripslashes($user_password);
         $password = mysqli_real_escape_string($con, $password);
+        $mdpassword = md5($password);
         //Checking is user existing in the database or not
         $query    = "SELECT * FROM `blood_donor` WHERE EMAIL='$email'
-        and PASSWORD='$password'";
+        and PASSWORD='$mdpassword'";
         $result = mysqli_query($con, $query) or die(mysql_error());
         $rows = mysqli_num_rows($result);
         if ($rows == 1) {

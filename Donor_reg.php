@@ -51,7 +51,7 @@
                         </div>
                         <div class="form-group">
                            <label class="control-label text-primary" for="DOB">D.O.B</label>
-                           <input type="text"  placeholder="YYYY/MM/DD"  id="DOB" required name="DOB"  class="form-control input-sm DATE">
+                           <input type="date"  placeholder="YYYY/MM/DD"  id="DOB" required name="DOB"  class="form-control input-sm DATE">
                         </div>
                         <div class="form-group">
                            <label class="control-label text-primary" for="BLOOD" >Blood Group</label>
@@ -171,7 +171,7 @@
                            <label class="control-label text-muted"><input type="checkbox" checked id="c3" >&nbsp; I agree to all the Terms and Conditions and give consent to have my contact and donor information published to the potential blood recipients. Also, I am eligible candidate to donate blood.</label>
                         </div>
                         <div class="form-group">
-                           <button class="btn btn-primary w-100" type="submit" required name="submit" id="registernow_btn">Register Now</button>
+                           <button class="btn btn-primary w-100" type="submit" name="submit">Register Now</button>
                            <!-- <a class="btn btn-primary w-100" id="registernow_btn"><button type="submit" name="submit">Register Now</button></a> -->
                         </div>
                      </form>

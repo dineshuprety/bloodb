@@ -17,7 +17,7 @@
         $contact_2   = $_POST['CONTACT_2'];
         $last_b_donet = $_POST['LAST_D_DATE'];
         $new_donor   = $_POST['NEW_DONOR'];
-        $password = $_POST['PASSWORD'];
+        $password = md5($_POST['PASSWORD']);
 
         // insert image
         $target_dir = "donor_image/";
