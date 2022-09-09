@@ -1,14 +1,21 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.7
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:8889
--- Generation Time: Sep 09, 2022 at 11:32 AM
--- Server version: 5.7.32
--- PHP Version: 8.0.8
+-- Host: 127.0.0.1
+-- Generation Time: Sep 09, 2022 at 06:51 PM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
 SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
 
 --
 -- Database: `blood`
@@ -33,6 +40,40 @@ CREATE TABLE `area` (
 
 INSERT INTO `area` (`AREA_ID`, `DISTRICT_ID`, `PROVINCE_ID`, `AREA_NAME`) VALUES
 (1, 1, 3, 'Sanepa');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `blood_campaign`
+--
+
+CREATE TABLE `blood_campaign` (
+  `DONOR_ID` int(11) NOT NULL,
+  `NAME` varchar(150) NOT NULL,
+  `FATHER_NAME` varchar(150) NOT NULL,
+  `GENDER` varchar(150) NOT NULL,
+  `DOB` date NOT NULL,
+  `BLOOD` varchar(150) NOT NULL,
+  `BODY_WEIGHT` int(11) NOT NULL,
+  `EMAIL` varchar(150) NOT NULL,
+  `ADDRESS` text NOT NULL,
+  `AREA` varchar(150) NOT NULL,
+  `DISTRICT` varchar(150) NOT NULL,
+  `PROVINCE` varchar(150) NOT NULL,
+  `COUNTRY` varchar(150) NOT NULL,
+  `CONTACT_1` varchar(150) NOT NULL,
+  `CONTACT_2` varchar(150) NOT NULL,
+  `NEW_DONOR` varchar(150) NOT NULL,
+  `LAST_D_DATE` date NOT NULL,
+  `DONOR_PIC` varchar(150) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `blood_campaign`
+--
+
+INSERT INTO `blood_campaign` (`DONOR_ID`, `NAME`, `FATHER_NAME`, `GENDER`, `DOB`, `BLOOD`, `BODY_WEIGHT`, `EMAIL`, `ADDRESS`, `AREA`, `DISTRICT`, `PROVINCE`, `COUNTRY`, `CONTACT_1`, `CONTACT_2`, `NEW_DONOR`, `LAST_D_DATE`, `DONOR_PIC`) VALUES
+(1, 'Biwash Karki', 'Bikash Karki', 'Male', '1997-11-10', 'O+', 75, 'karkibibash@gmail.com', 'Ekantakuna, Petrol Pump', 'Ekantakuna', 'Lalitpur', 'Province No. 3', 'Nepal', '9860123456', '985612345', 'Yes', '0000-00-00', 'donor_image/471high_quality_lens_flares_in_png_05_by_genivaldosouza_d9ztl6e-pre.jpg');
 
 -- --------------------------------------------------------
 
@@ -95,8 +136,15 @@ CREATE TABLE `campaign` (
   `district_name` varchar(255) NOT NULL,
   `date` varchar(255) NOT NULL,
   `contact` varchar(255) NOT NULL,
-  `status` int(11) NOT NULL DEFAULT '0'
+  `status` int(11) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `campaign`
+--
+
+INSERT INTO `campaign` (`id`, `campaign_name`, `province_name`, `district_name`, `date`, `contact`, `status`) VALUES
+(1, 'Xerxes Reilly', 'Province No. 7', 'Karen Atkinson', '1975-05-05', '+1 (106) 805-3653', 0);
 
 -- --------------------------------------------------------
 
@@ -281,7 +329,7 @@ CREATE TABLE `request_blood` (
   `CON2` varchar(150) NOT NULL,
   `REASON` text NOT NULL,
   `PIC` varchar(150) NOT NULL,
-  `STATUS` int(11) NOT NULL DEFAULT '0',
+  `STATUS` int(11) NOT NULL DEFAULT 0,
   `CDATE` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -302,6 +350,12 @@ INSERT INTO `request_blood` (`ID`, `NAME`, `GENDER`, `BLOOD`, `BUNIT`, `HOSP`, `
 --
 ALTER TABLE `area`
   ADD PRIMARY KEY (`AREA_ID`);
+
+--
+-- Indexes for table `blood_campaign`
+--
+ALTER TABLE `blood_campaign`
+  ADD PRIMARY KEY (`DONOR_ID`);
 
 --
 -- Indexes for table `blood_donor`
@@ -356,6 +410,12 @@ ALTER TABLE `area`
   MODIFY `AREA_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `blood_campaign`
+--
+ALTER TABLE `blood_campaign`
+  MODIFY `DONOR_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `blood_donor`
 --
 ALTER TABLE `blood_donor`
@@ -365,7 +425,7 @@ ALTER TABLE `blood_donor`
 -- AUTO_INCREMENT for table `campaign`
 --
 ALTER TABLE `campaign`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `country`
@@ -396,3 +456,8 @@ ALTER TABLE `province`
 --
 ALTER TABLE `request_blood`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
