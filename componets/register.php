@@ -27,7 +27,7 @@ if (isset($_POST['submit'])) {
 
     if (empty($name) || empty($father_name) || empty($gender) || empty($dob) || empty($blood) || empty($body_weight) || empty($email) || empty($country) || empty($province) || empty($district) || empty($area) || empty($addrress) || empty($contact_1) || empty($contact_2) || empty($last_b_donet) || empty($new_donor) || empty($password)) {
         echo "<div class='alert alert-danger text-center'>Field can't be empty!</div>";
-    } elseif (date_diff(date_create($dob), date_create('today')) <= 17) {
+    } elseif (date_diff(date_create($dob), date_create('today'))->y <= 17) {
         echo "<div class='alert alert-danger text-center'>You must be at least 17 years old.</div>";
     } else {
         $sql = "INSERT INTO blood_donor (NAME, FATHER_NAME, GENDER, DOB, BLOOD, BODY_WEIGHT, EMAIL, PASSWORD ,ADDRESS, AREA, DISTRICT, PROVINCE, COUNTRY, CONTACT_1, CONTACT_2, NEW_DONOR, LAST_D_DATE, DONOR_PIC, STATUS)

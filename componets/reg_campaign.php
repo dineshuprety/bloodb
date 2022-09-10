@@ -25,11 +25,17 @@ if (isset($_GET['add'])) {
     $new_donor   =  $rows[16];
     $target_file = $rows[18];
 
+    $earlier = new DateTime($last_b_donet);
+    $later = new DateTime('today');
+    $numberOfDaysSinceLastDonate = $later->diff($earlier)->format("%a");
+
     $query1 = "SELECT * FROM blood_campaign WHERE EMAIL = '$email'";
     $result1 = mysqli_query($con, $query1) or die(mysql_error());
     $rows1 = mysqli_num_rows($result1);
     if ($rows1 == 1) {
-        echo "<div class='alert alert-danger'> This User Already Register This Campaign.</div>";
+        echo "<div class='alert alert-danger'> You have already registered.</div>";
+    } else if ($numberOfDaysSinceLastDonate <= 56) {
+        echo "<div class='alert alert-danger'> You cannot donate blood since it hasn't been 56 days since you last donated.</div>";
     } else {
         $sql = "INSERT INTO blood_campaign (NAME, FATHER_NAME, GENDER, DOB, BLOOD, BODY_WEIGHT, EMAIL,ADDRESS, AREA, DISTRICT, PROVINCE, COUNTRY, CONTACT_1, CONTACT_2, NEW_DONOR, LAST_D_DATE, DONOR_PIC)
         VALUES ('{$name}','{$father_name}','{$gender}','{$dob}','{$blood}','{$body_weight}','{$email}','{$addrress}','{$area}','{$district}','{$province}','{$country}','{$contact_1}','{$contact_2}','{$new_donor}','{$last_b_donet}','{$target_file}')";

@@ -146,7 +146,11 @@
                         </div>
                         <div class="form-group">
                            <label class="control-label text-primary" for="CONTACT_2" >Password</label>
-                           <input type="text" required name="PASSWORD" id="CONTACT_2" class="form-control" placeholder="Password">
+                           <input type="password" required name="PASSWORD" id="CONTACT_2" class="form-control" placeholder="Password">
+                        </div>
+                        <div class="form-group">
+                           <label class="control-label text-primary" for="CONTACT_2" >Password</label>
+                           <input type="password" required name="PASSWORD_CONFIRMATION"class="form-control" placeholder="Confirm Password">
                         </div>
                         <hr>
                         <div id="volu">
