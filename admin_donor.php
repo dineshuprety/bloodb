@@ -26,10 +26,10 @@ include("admin_function.php");
 		<div class="row">
 		<div class="col-md-6 col-md-offset-3">
 	
-			<form role="form">
+			<form role="form" action="admin_donor.php" method="get">
 				<div class="form-group text-primary">
 					<label>Search Text</label>
-					<input type="text" id="q" class="form-control">
+					<input type="text" id="" name="search" class="form-control">
 				</div>
 			</form>
 		</div>
@@ -37,8 +37,16 @@ include("admin_function.php");
 			<div class='table-responsive' id="feedback">
 			
 			<?php 
-				$sql="Select * from blood_donor";
-				load_donor($sql,$con);
+				if(isset($_GET['search']))
+				{
+					$search = $_GET['search'];
+					$sql="Select * from blood_donor where NAME like '%$search%'";
+					load_donor($sql,$con);
+				}else{
+
+					$sql="Select * from blood_donor";
+					load_donor($sql,$con);
+				}
 			?>
 			
 			<div>
