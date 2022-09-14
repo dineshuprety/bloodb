@@ -34,7 +34,10 @@ if (isset($_POST['submit'])) {
             VALUES ('{$name}','{$father_name}','{$gender}','{$dob}','{$blood}','{$body_weight}','{$email}','{$password}','{$addrress}','{$area}','{$district}','{$province}','{$country}','{$contact_1}','{$contact_2}','{$new_donor}','{$last_b_donet}','{$target_file}',0)";
 
         if ($con->query($sql) === TRUE) {
-            echo "<div class='alert alert-success text-center'>Register created successfully. <a href='/'>Login</a></div>";
+            $_SESSION['email'] = $email;
+            // Redirect user to index.php
+            header("Location: user.php");
+            // echo "<div class='alert alert-success text-center'>Register created successfully. <a href='/'>Login</a></div>";
         }
     }
 }
